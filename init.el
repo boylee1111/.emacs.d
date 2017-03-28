@@ -12,6 +12,8 @@
 (global-linum-mode t)
 (electric-pair-mode 1)
 (global-font-lock-mode 0) ;; turn off syntax highlighting
+(global-set-key (kbd "C-z") 'undo)
+(global-set-key (kbd "C-S-z") 'redo)
 
 ;; ====================== plugins config ======================
 
@@ -52,7 +54,7 @@
 (setq wttrin-default-cities '(("Shanghai" "China") ("Pittsburgh")))
 
 ;; paradox config
-(setq paradox-github-token "162031a95dc05d27715e45100c7a51baa2e50716")
+
 
 ;; ============================================================
 
@@ -71,3 +73,4 @@
  ;; If there is more than one, they won't work right.
  )
 
+(put 'erase-buffer 'disabled nil)
