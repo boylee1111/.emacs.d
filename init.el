@@ -20,7 +20,7 @@
 ;; ====================== plugins config ======================
 
 ;; autocomplete config
-;; (ac-config-default)
+(ac-config-default)
 
 ;; emojify config
 (add-hook 'after-init-hook #'global-emojify-mode)
@@ -55,7 +55,7 @@
 (switch-to-buffer-other-window "*scratch*")
 
 ;; wttrin confg
-(setq wttrin-default-cities '(("Shanghai" "China") ("Pittsburgh")))
+(setq wttrin-default-cities '(("Shanghai" "China") ("San Jose")))
 
 ;; paradox config
  (setq paradox-github-token "98f68fe913f49514fc5af84f308d6c09c0a3b471")
