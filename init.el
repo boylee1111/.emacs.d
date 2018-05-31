@@ -58,6 +58,8 @@
 (setq wttrin-default-cities '(("Shanghai" "China") ("San Jose")))
 
 ;; paradox config
+(setq paradox-github-token (when (file-exists-p "~/private/")
+			     (load "~/private/emacs-github-token")))
 
 ;; ============================================================
 
