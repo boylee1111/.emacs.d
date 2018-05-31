@@ -10,10 +10,12 @@
 
 ;; require init file
 (global-linum-mode t)
+(global-visual-line-mode t)
 (electric-pair-mode 1)
 (global-font-lock-mode 0) ;; turn off syntax highlighting
 (global-set-key (kbd "C-z") 'undo)
 (global-set-key (kbd "C-S-z") 'redo)
+(setq column-number-mode t)
 
 ;; ====================== plugins config ======================
 
@@ -49,12 +51,14 @@
 
 ;; neotree config
 (global-set-key [f8] 'neotree-toggle)
+(neotree-toggle)
+(switch-to-buffer-other-window "*scratch*")
 
 ;; wttrin confg
 (setq wttrin-default-cities '(("Shanghai" "China") ("Pittsburgh")))
 
 ;; paradox config
-
+ (setq paradox-github-token "98f68fe913f49514fc5af84f308d6c09c0a3b471")
 
 ;; ============================================================
 
@@ -65,7 +69,8 @@
  ;; If there is more than one, they won't work right.
  '(package-selected-packages
    (quote
-    (paradox wttrin xkcd neotree visual-regexp rainbow-delimiters undo-tree auctex google-translate emojify markdown-mode auto-complete))))
+    (paradox wttrin xkcd neotree visual-regexp rainbow-delimiters undo-tree auctex google-translate emojify markdown-mode auto-complete)))
+ '(paradox-automatically-star t))
 (custom-set-faces
  ;; custom-set-faces was added by Custom.
  ;; If you edit it by hand, you could mess it up, so be careful.

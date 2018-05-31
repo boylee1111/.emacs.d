@@ -1,0 +1,3 @@
+ls
+perl test/xterm-colortest && perl tests/256colors2.pl
+ls
