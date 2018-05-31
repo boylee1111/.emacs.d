@@ -58,7 +58,6 @@
 (setq wttrin-default-cities '(("Shanghai" "China") ("San Jose")))
 
 ;; paradox config
- (setq paradox-github-token "98f68fe913f49514fc5af84f308d6c09c0a3b471")
 
 ;; ============================================================
 
