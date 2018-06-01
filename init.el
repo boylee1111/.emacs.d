@@ -61,6 +61,12 @@
 (setq paradox-github-token (when (file-exists-p "~/private/")
 			     (load "~/private/emacs-github-token")))
 
+;; yaml-mode config
+(add-to-list 'auto-mode-alist '("\\.yml\\'" . yaml-mode))
+(add-hook 'yaml-mode-hook
+      '(lambda ()
+         (define-key yaml-mode-map "\C-m" 'newline-and-indent)))
+
 ;; ============================================================
 
 (custom-set-variables
@@ -70,7 +76,7 @@
  ;; If there is more than one, they won't work right.
  '(package-selected-packages
    (quote
-    (paradox wttrin xkcd neotree visual-regexp rainbow-delimiters undo-tree auctex google-translate emojify markdown-mode auto-complete)))
+    (json-mode yaml-mode paradox wttrin xkcd neotree visual-regexp rainbow-delimiters undo-tree auctex google-translate emojify markdown-mode auto-complete)))
  '(paradox-automatically-star t))
 (custom-set-faces
  ;; custom-set-faces was added by Custom.
