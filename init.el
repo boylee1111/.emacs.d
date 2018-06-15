@@ -12,7 +12,7 @@
 (global-linum-mode t)
 (global-visual-line-mode t)
 (electric-pair-mode 1)
-(global-font-lock-mode 0) ;; turn off syntax highlighting
+(global-font-lock-mode 1) ;; turn off syntax highlighting
 (global-set-key (kbd "C-z") 'undo)
 (global-set-key (kbd "C-S-z") 'redo)
 (setq column-number-mode t)
@@ -67,6 +67,9 @@
       '(lambda ()
          (define-key yaml-mode-map "\C-m" 'newline-and-indent)))
 
+;; pangu spacing
+(global-pangu-spacing-mode 1)
+
 ;; ============================================================
 
 (custom-set-variables
@@ -76,7 +79,7 @@
  ;; If there is more than one, they won't work right.
  '(package-selected-packages
    (quote
-    (go-autocomplete go-mode json-mode yaml-mode paradox wttrin xkcd neotree visual-regexp rainbow-delimiters undo-tree auctex google-translate emojify markdown-mode auto-complete)))
+    (pangu-spacing go-autocomplete go-mode json-mode yaml-mode paradox wttrin xkcd neotree visual-regexp rainbow-delimiters undo-tree auctex google-translate emojify markdown-mode auto-complete)))
  '(paradox-automatically-star t))
 (custom-set-faces
  ;; custom-set-faces was added by Custom.
